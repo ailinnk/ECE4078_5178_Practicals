@@ -1,0 +1,32 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/Week01-Representations/Practical1_Support",
+    "${workspaceFolder}/Week02-Modelling/Support",
+    "${workspaceFolder}/Week03-Control/Support",
+    "${workspaceFolder}/Week04-Estimation/Support",
+    "${workspaceFolder}/Week05-Planning/Support",
+    "${workspaceFolder}/Week06-Articulated-kinematics/Support",
+    "${workspaceFolder}/Week07-Articulated-dynamics/Support",
+    "${workspaceFolder}/Week08-Learning/Support",
+    "${workspaceFolder}/Week09-Reinforcement-learning-1/Support",
+    "${workspaceFolder}/Week10-Reinforcement-learning-2/Support"
+  ],
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/Week01-Representations/Practical1_Support",
+    "${workspaceFolder}/Week02-Modelling/Support",
+    "${workspaceFolder}/Week03-Control/Support",
+    "${workspaceFolder}/Week04-Estimation/Support",
+    "${workspaceFolder}/Week05-Planning/Support",
+    "${workspaceFolder}/Week06-Articulated-kinematics/Support",
+    "${workspaceFolder}/Week07-Articulated-dynamics/Support",
+    "${workspaceFolder}/Week08-Learning/Support",
+    "${workspaceFolder}/Week09-Reinforcement-learning-1/Support",
+    "${workspaceFolder}/Week10-Reinforcement-learning-2/Support"
+  ],
+  "jupyter.widgetScriptSources": [
+    "unpkg.com",
+    "jsdelivr.com"
+  ],
+  "jupyter.themeMatplotlibPlots": true
+}
