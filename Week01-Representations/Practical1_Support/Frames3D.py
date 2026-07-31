@@ -45,7 +45,6 @@ class Frame3D:
                
     
     def rotate_frame(self, new_rotation):
-    	self.figure.canvas.draw_idle()
     	new_o = new_rotation.dot(self.initial_state[0])
     	new_x = new_rotation.dot(self.initial_state[1])
     	new_y = new_rotation.dot(self.initial_state[2])
@@ -53,14 +52,13 @@ class Frame3D:
     	self.robot_ax[0].set_data_3d([new_o[0], new_x[0]], [new_o[1], new_x[1]], [new_o[2], new_x[2]])
     	self.robot_ax[1].set_data_3d([new_o[0], new_y[0]], [new_o[1], new_y[1]], [new_o[2], new_y[2]])
     	self.robot_ax[2].set_data_3d([new_o[0], new_z[0]], [new_o[1], new_z[1]], [new_o[2], new_z[2]])
+    	self.figure.canvas.draw()
 
     
     def apply_transform(self, new_transform):
 
     	def to_homogeneous(v):
     		return np.transpose(np.hstack([v, 1]))
-
-    	self.figure.canvas.draw_idle()
     	
     	# Compute new robot frame
     	new_o = np.matmul(new_transform, to_homogeneous(self.initial_state[0]))
@@ -70,3 +68,4 @@ class Frame3D:
     	self.robot_ax[0].set_data_3d([new_o[0], new_x[0]], [new_o[1], new_x[1]], [new_o[2], new_x[2]])
     	self.robot_ax[1].set_data_3d([new_o[0], new_y[0]], [new_o[1], new_y[1]], [new_o[2], new_y[2]])
     	self.robot_ax[2].set_data_3d([new_o[0], new_z[0]], [new_o[1], new_z[1]], [new_o[2], new_z[2]])
+    	self.figure.canvas.draw()
